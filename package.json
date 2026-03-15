@@ -1,0 +1,13 @@
+{
+  "name": "aws-certified-generative-ai-developer-professional",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev notes",
+    "docs:build": "vitepress build notes",
+    "docs:preview": "vitepress preview notes"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">RAG architecture</title>
+  <desc id="desc">User, app, Bedrock Knowledge Bases, vector store, data sources, and foundation model.</desc>
+  <defs>
+    <style>
+      .bg { fill: #fcfcf7; }
+      .box { fill: #ffffff; stroke: #1f2937; stroke-width: 2; rx: 16; ry: 16; }
+      .aws { fill: #fff4e5; }
+      .data { fill: #eef7ff; }
+      .accent { fill: #f3f4f6; }
+      .line { stroke: #1f2937; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .dash { stroke-dasharray: 10 8; }
+      .title { font: 700 26px Arial, sans-serif; fill: #111827; }
+      .label { font: 700 19px Arial, sans-serif; fill: #111827; }
+      .small { font: 15px Arial, sans-serif; fill: #374151; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#1f2937"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="520"/>
+  <text class="title" x="60" y="50">RAG Knowledge Assistant</text>
+
+  <rect class="box accent" x="60" y="170" width="150" height="90"/>
+  <text class="label" x="112" y="225">User</text>
+
+  <rect class="box" x="280" y="150" width="220" height="130"/>
+  <text class="label" x="354" y="200">Web / App</text>
+  <text class="small" x="318" y="230">Auth, session, UI</text>
+  <text class="small" x="323" y="252">API control</text>
+
+  <rect class="box aws" x="570" y="135" width="280" height="160"/>
+  <text class="label" x="610" y="185">Amazon Bedrock</text>
+  <text class="label" x="624" y="212">Knowledge Bases</text>
+  <text class="small" x="610" y="242">Retrieve, augment prompt,</text>
+  <text class="small" x="610" y="264">generate with citations</text>
+
+  <rect class="box data" x="920" y="135" width="220" height="160"/>
+  <text class="label" x="975" y="185">Vector Store</text>
+  <text class="small" x="958" y="220">OpenSearch Serverless</text>
+  <text class="small" x="982" y="242">Aurora pgvector</text>
+  <text class="small" x="997" y="264">or managed store</text>
+
+  <rect class="box aws" x="570" y="350" width="280" height="105"/>
+  <text class="label" x="656" y="395">FM</text>
+  <text class="small" x="620" y="425">Context-aware response</text>
+
+  <rect class="box data" x="80" y="350" width="420" height="105"/>
+  <text class="label" x="190" y="392">Data Sources</text>
+  <text class="small" x="128" y="422">Amazon S3, Confluence, SharePoint, Salesforce</text>
+
+  <path class="line" d="M210 215 H280"/>
+  <path class="line" d="M500 215 H570"/>
+  <path class="line" d="M850 215 H920"/>
+  <path class="line dash" d="M920 245 H850"/>
+  <path class="line" d="M710 295 V350"/>
+  <path class="line" d="M500 402 H570"/>
+  <path class="line dash" d="M570 380 H500"/>
+  <path class="line" d="M710 135 V95 H390 V150"/>
+
+  <text class="small" x="604" y="106">retrieve + augment</text>
+  <text class="small" x="873" y="203">semantic search</text>
+  <text class="small" x="515" y="392">sync / ingest</text>
+  <text class="small" x="264" y="135">query</text>
+</svg>
