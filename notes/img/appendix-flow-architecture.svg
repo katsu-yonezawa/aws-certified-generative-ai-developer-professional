@@ -1,62 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="title desc">
-  <title id="title">Fixed workflow architecture</title>
-  <desc id="desc">Event or API enters a fixed sequence orchestrated by Bedrock Flows or Step Functions.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="460" viewBox="0 0 1050 460" role="img" aria-labelledby="title desc">
+  <title id="title">固定ワークフローアーキテクチャ</title>
+  <desc id="desc">イベントまたはAPIから開始し、Bedrock FlowsまたはStep Functionsで固定シーケンスを実行する構成図</desc>
   <defs>
     <style>
-      .bg { fill: #fcfcf8; }
-      .box { fill: #ffffff; stroke: #1f2937; stroke-width: 2; rx: 16; ry: 16; }
-      .aws { fill: #fff4e5; }
-      .data { fill: #eef7ff; }
-      .line { stroke: #1f2937; stroke-width: 3; fill: none; marker-end: url(#arrow); }
-      .title { font: 700 26px Arial, sans-serif; fill: #111827; }
-      .label { font: 700 18px Arial, sans-serif; fill: #111827; }
-      .small { font: 15px Arial, sans-serif; fill: #374151; }
+      .bg { fill: #fafafa; }
+      .box { fill: #ffffff; stroke: #374151; stroke-width: 1.5; rx: 12; ry: 12; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.08)); }
+      .aws { fill: #fef3c7; }
+      .data { fill: #e0f2fe; }
+      .line { stroke: #6b7280; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .title { font: 700 22px "Hiragino Sans", "Meiryo", sans-serif; fill: #111827; }
+      .label { font: 600 15px "Hiragino Sans", "Meiryo", sans-serif; fill: #1f2937; text-anchor: middle; }
+      .small { font: 13px "Hiragino Sans", "Meiryo", sans-serif; fill: #4b5563; text-anchor: middle; }
+      .note { font: 12px "Hiragino Sans", "Meiryo", sans-serif; fill: #6b7280; }
     </style>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M0,0 L12,6 L0,12 z" fill="#1f2937"/>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
     </marker>
   </defs>
-  <rect class="bg" x="0" y="0" width="1280" height="520"/>
-  <text class="title" x="60" y="50">Fixed Workflow Pattern</text>
+  <rect class="bg" x="0" y="0" width="1050" height="460"/>
+  <text class="title" x="50" y="40">固定ワークフローパターン</text>
 
-  <rect class="box" x="60" y="190" width="160" height="90"/>
-  <text class="label" x="107" y="245">API / Event</text>
+  <!-- API/イベント: x=50, y=175, w=130, h=70 → 中心(115, 210) -->
+  <rect class="box" x="50" y="175" width="130" height="70"/>
+  <text class="label" x="115" y="215">API / イベント</text>
 
-  <rect class="box aws" x="290" y="165" width="250" height="140"/>
-  <text class="label" x="358" y="215">Orchestrator</text>
-  <text class="small" x="338" y="245">Bedrock Flows</text>
-  <text class="small" x="336" y="267">or Step Functions</text>
+  <!-- オーケストレーター: x=230, y=150, w=200, h=120 → 中心(330, 210) -->
+  <rect class="box aws" x="230" y="150" width="200" height="120"/>
+  <text class="label" x="330" y="195">オーケストレーター</text>
+  <text class="small" x="330" y="220">Bedrock Flows</text>
+  <text class="small" x="330" y="242">または Step Functions</text>
 
-  <rect class="box" x="620" y="90" width="180" height="90"/>
-  <text class="label" x="657" y="143">Classify</text>
+  <!-- 分類: x=480, y=80, w=140, h=70 → 中心(550, 115) -->
+  <rect class="box" x="480" y="80" width="140" height="70"/>
+  <text class="label" x="550" y="120">分類</text>
 
-  <rect class="box" x="620" y="215" width="180" height="90"/>
-  <text class="label" x="660" y="268">Retrieve</text>
+  <!-- 検索: x=480, y=175, w=140, h=70 → 中心(550, 210) -->
+  <rect class="box" x="480" y="175" width="140" height="70"/>
+  <text class="label" x="550" y="215">検索</text>
 
-  <rect class="box" x="620" y="340" width="180" height="90"/>
-  <text class="label" x="657" y="393">Generate</text>
+  <!-- 生成: x=480, y=270, w=140, h=70 → 中心(550, 305) -->
+  <rect class="box" x="480" y="270" width="140" height="70"/>
+  <text class="label" x="550" y="310">生成</text>
 
-  <rect class="box data" x="890" y="90" width="170" height="90"/>
-  <text class="label" x="936" y="143">Validate</text>
+  <!-- 検証: x=670, y=80, w=130, h=70 → 中心(735, 115) -->
+  <rect class="box data" x="670" y="80" width="130" height="70"/>
+  <text class="label" x="735" y="120">検証</text>
 
-  <rect class="box data" x="890" y="215" width="170" height="90"/>
-  <text class="label" x="930" y="268">Approve</text>
+  <!-- 承認: x=670, y=175, w=130, h=70 → 中心(735, 210) -->
+  <rect class="box data" x="670" y="175" width="130" height="70"/>
+  <text class="label" x="735" y="215">承認</text>
 
-  <rect class="box data" x="890" y="340" width="220" height="90"/>
-  <text class="label" x="948" y="393">Downstream App</text>
+  <!-- 後続アプリ: x=670, y=270, w=160, h=70 → 中心(750, 305) -->
+  <rect class="box data" x="670" y="270" width="160" height="70"/>
+  <text class="label" x="750" y="310">後続アプリ</text>
 
-  <rect class="box aws" x="60" y="360" width="220" height="90"/>
-  <text class="label" x="106" y="413">Retry / Timeout / Audit</text>
+  <!-- リトライ/タイムアウト/監査: x=50, y=320, w=240, h=70 → 中心(170, 355) -->
+  <rect class="box aws" x="50" y="320" width="240" height="70"/>
+  <text class="label" x="170" y="360">リトライ / タイムアウト / 監査</text>
 
-  <path class="line" d="M220 235 H290"/>
-  <path class="line" d="M540 235 H620"/>
-  <path class="line" d="M710 180 V215"/>
-  <path class="line" d="M710 305 V340"/>
-  <path class="line" d="M800 135 H890"/>
-  <path class="line" d="M800 260 H890"/>
-  <path class="line" d="M800 385 H890"/>
-  <path class="line" d="M170 360 V305 H290"/>
+  <!-- 接続線 -->
+  <!-- API/イベント(180,210) → オーケストレーター(230,210) -->
+  <path class="line" d="M180 210 H230"/>
 
-  <text class="small" x="559" y="224">fixed sequence</text>
-  <text class="small" x="78" y="338">control plane</text>
+  <!-- オーケストレーター(430,210) → 検索(480,210) -->
+  <path class="line" d="M430 210 H480"/>
+
+  <!-- 分類(550,150) → 検索(550,175) -->
+  <path class="line" d="M550 150 V175"/>
+
+  <!-- 検索(550,245) → 生成(550,270) -->
+  <path class="line" d="M550 245 V270"/>
+
+  <!-- 分類(620,115) → 検証(670,115) -->
+  <path class="line" d="M620 115 H670"/>
+
+  <!-- 検索(620,210) → 承認(670,210) -->
+  <path class="line" d="M620 210 H670"/>
+
+  <!-- 生成(620,305) → 後続アプリ(670,305) -->
+  <path class="line" d="M620 305 H670"/>
+
+  <!-- リトライ(170,320) → 上へ → オーケストレーター(230,270) -->
+  <path class="line" d="M170 320 V285 H230"/>
+
+  <!-- ラベル -->
+  <text class="note" x="445" y="200">固定シーケンス</text>
+  <text class="note" x="68" y="305">コントロールプレーン</text>
 </svg>
