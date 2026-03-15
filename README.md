@@ -1,0 +1,1 @@
+# aws-certified-generative-ai-developer-professional
